@@ -12,6 +12,8 @@ Status: ACTIVE | SUPERSEDED | REVOKED
 
 Deciziile `D-001`…`D-005` au fost luate anterior acestei consolidări și sunt reconstituite din cod, din `grund.md` și din `README.md`. Data indicată este data consolidării, nu data la care au fost luate.
 
+Ele privesc **serviciul de memorie `vogo-mcp` găzduit în acest repository, nu produsul EIS4P**. Distincția este explicată în `CONTEXT.md` și decisă în `D-008`.
+
 ---
 
 ```text
@@ -74,5 +76,24 @@ Date: 2026-08-12
 Decision: Documentele `VOGO eBS Intellingence Suite 4 Production v.2.0.7.docx` (≈21 MB) și `.pdf` (≈2,9 MB) intră în repository, urmărite prin Git LFS. `.gitattributes` urmărește tiparele `*.docx` și `*.pdf`.
 Reason: Aprobare explicită a utilizatorului la 2026-08-12. Politica VOGO cere ca fișierele mari aprobate să fie atribuite explicit Git LFS, nu adăugate direct în istoricul Git.
 Consequences: Orice `.docx` sau `.pdf` adăugat ulterior trece automat prin LFS. Clonarea repository-ului necesită `git lfs` instalat. Traficul LFS al contului GitHub este consumat la fiecare clonare completă.
+Status: ACTIVE
+```
+
+```text
+D-008
+Date: 2026-08-12
+Decision: Codul serviciului de memorie `vogo-mcp` rămâne deocamdată în repository-ul EIS4P. Nu se mută nici într-un repository propriu, nici în vogo.me. În schimb, contextul AI consemnează explicit că repository-ul găzduiește un produs străin, iar identitatea reală a EIS4P este documentată separat.
+Reason: Identificarea inițială a proiectului a fost greșită: contextul AI scris la 2026-08-12 descria EIS4P ca fiind serviciul de memorie. Utilizatorul a clarificat că EIS4P este VOGO eBS Intelligence Suite 4 Production — ETL, BI și agentic AI pe date de producție —, confirmat de materialul de prezentare v.2.0.7 din rădăcină. Dintre variantele propuse, utilizatorul a ales corectarea contextului fără mutare de cod, ca pas minim care oprește propagarea informației false.
+Alternatives: Extragerea serviciului într-un repository propriu `C:\VOGO\50-SOURCE\vogo-mcp`; mutarea lui în repository-ul vogo.me, unde există deja o implementare PHP echivalentă.
+Consequences: Repository-ul rămâne cu două teme fără legătură funcțională. `ai\RAG.md` devine index și rutează către `ai\rag\eis4p-produs.md` și `ai\rag\vogo-mcp-memorie.md`. Orice agent trebuie să verifice despre care temă este vorba înainte de a acționa. Decizia este explicit provizorie — separarea rămâne întrebarea deschisă 1 din `CONTEXT.md`.
+Status: ACTIVE
+```
+
+```text
+D-009
+Date: 2026-08-12
+Decision: Deciziile `D-001`…`D-005` se păstrează în acest jurnal, marcate ca aparținând codului găzduit, nu produsului.
+Reason: Sunt decizii reale, luate și implementate; ștergerea lor ar pierde trasabilitatea. Fără marcaj însă, un agent le-ar citi drept decizii de arhitectură ale produsului EIS4P.
+Consequences: Dacă serviciul `vogo-mcp` se mută într-un repository propriu, `D-001`…`D-005` și `D-007` îl însoțesc, iar aici rămân numai `D-006`, `D-008` și `D-009`.
 Status: ACTIVE
 ```
