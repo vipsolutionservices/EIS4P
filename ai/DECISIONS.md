@@ -67,3 +67,12 @@ Reason: Cerință explicită a utilizatorului: aplicarea promptului canonic din 
 Consequences: Contextul AI persistent se ține în `ai\`. La finalul fiecărei etape se actualizează `CONTEXT.md`, `DECISIONS.md`, `TASKS.md` și `HANDOFF.md`.
 Status: ACTIVE
 ```
+
+```text
+D-007
+Date: 2026-08-12
+Decision: Documentele `VOGO eBS Intellingence Suite 4 Production v.2.0.7.docx` (≈21 MB) și `.pdf` (≈2,9 MB) intră în repository, urmărite prin Git LFS. `.gitattributes` urmărește tiparele `*.docx` și `*.pdf`.
+Reason: Aprobare explicită a utilizatorului la 2026-08-12. Politica VOGO cere ca fișierele mari aprobate să fie atribuite explicit Git LFS, nu adăugate direct în istoricul Git.
+Consequences: Orice `.docx` sau `.pdf` adăugat ulterior trece automat prin LFS. Clonarea repository-ului necesită `git lfs` instalat. Traficul LFS al contului GitHub este consumat la fiecare clonare completă.
+Status: ACTIVE
+```

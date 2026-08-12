@@ -42,10 +42,7 @@ Funcțional și verificat end-to-end pe MariaDB: salvare versionată cu audit, c
 
 Amânat față de `grund.md`: endpointuri separate `approve` / `promote` / `archive`, chei API multi-client cu hash (`mcp_api_client`), `pgvector`, suită automată de teste, Docker (neaplicabil pe găzduire partajată).
 
-Starea repository-ului la 2026-08-12 — 12 fișiere necomise, dintre care nucleul funcțional al serviciului:
-
-- modificate: `README.md`, `package.json`, `src/backend/index.js`;
-- neurmărite: `.env.example`, `db/`, `smoke.sh`, `src/backend/auth.js`, `src/backend/db.js`, `src/backend/memory.service.js`, `src/mcp/server.js`, `src/mcp/http-server.js`, `src/mcp/doc-server.js`, plus documentele `VOGO eBS Intellingence Suite 4 Production v.2.0.7.docx` (≈21 MB) și `.pdf` (≈2,9 MB).
+Starea repository-ului la 2026-08-12: arbore de lucru curat, `master` sincronizat cu `origin` la commit-ul `2d9b00e`. Nucleul funcțional al serviciului, contextul AI canonic și cele două documente ale produsului — acestea din urmă prin Git LFS — sunt publicate.
 
 Directoarele `deploy\`, `scripts\`, `tools\`, `tests\` și `.github\` există dar sunt goale. Fișierele din `docs\architecture` și `docs\requirements` sunt goale. `CHANGELOG.md`, `CONTRIBUTING.md` și `LICENSE` sunt goale.
 
@@ -60,7 +57,9 @@ Directoarele `deploy\`, `scripts\`, `tools\`, `tests\` și `.github\` există da
 
 ## Întrebări deschise
 
-1. Cele două documente `VOGO eBS Intelligence Suite 4 Production v.2.0.7` (docx + pdf) intră în Git prin LFS, se mută în zona de proiect din `30-PROJECTS`, sau rămân doar pe disc, excluse prin `.gitignore`?
+1. Locul serverelor MCP. Utilizatorul a semnalat la 2026-08-12 că partea MCP „ar trebui mutată către `vogo.me/mcp`". Rămâne de stabilit ce se mută — numai `doc-server.js`, care deja vorbește cu `vogo.me/mcp`, sau și `http-server.js` / `server.js` — și unde anume. Vezi `TASKS.md` → `T-010`.
 2. Copia legacy `C:\sources\EIS4P` se migrează formal după procedura din promptul canonic, sau se consideră deja înlocuită de folderul canonic din `50-SOURCE`?
 3. Relația dintre acest repository și proiectul `MARCEL` din registru — `MARCEL SRL — PoC VOGO eBS Intelligence Suite 4 Production` — trebuie clarificată: produsul menționat în documentele din rădăcină este același, dar codul din acest repository implementează serviciul de memorie MCP, nu suita eBS.
-4. Suprapunerea dintre `src/mcp/server.js` și `src/mcp/http-server.js`: uneltele au nume diferite (`get_effective_memory` / `save_*` față de `memory_load` / `memory_list` / `memory_save` / `memory_replace`). Se unifică denumirile sau se păstrează două contracte distincte?
+4. Suprapunerea dintre `src/mcp/server.js` și `src/mcp/http-server.js`: uneltele au nume diferite (`get_effective_memory` / `save_*` față de `memory_load` / `memory_list` / `memory_save` / `memory_replace`). Se unifică denumirile sau se păstrează două contracte distincte? Depinde de întrebarea 1.
+
+Întrebarea inițială despre cele două documente ale produsului a fost închisă prin `DECISIONS.md` → `D-007`.
