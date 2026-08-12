@@ -8,7 +8,7 @@ Sarcinile sunt marcate cu tema de care aparțin: `[produs]` pentru VOGO eBS Inte
 
 ## NEXT
 
-- `T-012` `[produs]` — Stabilirea scopului PoC-ului Marcel: ce se demonstrează, pe ce foi din template și cu ce criteriu de acceptare. Este aceeași întrebare cu deschisa 3 din `C:\VOGO\30-PROJECTS\MARCEL SRL\ai\CONTEXT.md`; se rezolvă acolo, iar rezultatul se consumă aici. Determină `T-011`.
+- `T-012` `[produs]` — Stabilirea scopului PoC-ului Marcel: ce se demonstrează, pe ce foi din template și cu ce criteriu de acceptare. Este aceeași întrebare cu una dintre cele deschise în proiectul `MARCEL`; se rezolvă acolo, iar rezultatul se consumă aici. Determină `T-011`.
 - `T-013` `[găzduit]` — Verificarea pe server a ce răspunde efectiv la `https://vogo.me/ai-mcp/`: aplicația Node din acest repository sau implementarea PHP din `vogo.me\ai-mcp\`. Sursele se contrazic. Următorul pas: `curl -I https://vogo.me/ai-mcp/` și inspecția directorului de pe găzduire.
 - `T-005` `[găzduit]` — Completarea sau eliminarea fișierelor și directoarelor goale: `CHANGELOG.md`, `CONTRIBUTING.md`, `LICENSE`, `src/backend/README.md`, `src/mcp/README.md`, plus directoarele `deploy\`, `scripts\`, `tools\`, `tests\`, `.github\`. Scheletul produsului — `src/memory\`, `src/rag\`, `docs/architecture\`, `docs/requirements\` — se păstrează gol până la `T-011`.
 - `T-006` `[găzduit]` — Versionarea scripturilor de operare `deploy.sh` și `rollback.sh`, existente în prezent doar pe server. Depinde de `T-013`: dacă aplicația Node nu mai rulează acolo, sarcina dispare.
@@ -21,9 +21,10 @@ Sarcinile sunt marcate cu tema de care aparțin: `[produs]` pentru VOGO eBS Inte
 
 ## DONE
 
-- `T-000` — Aplicarea structurii canonice AI VOGO: `AGENTS.md`, `CLAUDE.md`, `ai\` complet, înregistrare în `C:\VOGO\PROJECTS.md`. Finalizat 2026-08-12 — `DECISIONS.md` → `D-006`.
+- `T-000` — Aplicarea structurii canonice AI VOGO: `AGENTS.md`, `CLAUDE.md`, `01-AI\` complet, înregistrare în `C:\VOGO\PROJECTS.md`. Finalizat 2026-08-12 — `DECISIONS.md` → `D-006`.
 - `T-001` `[găzduit]` — Tratamentul documentelor mari din rădăcină. Rezolvat 2026-08-12: aprobare explicită, ambele urmărite prin Git LFS — `D-007`.
 - `T-002` `[găzduit]` — Comiterea și publicarea nucleului funcțional. Commit `2d9b00e` pe `master`, 24 de fișiere, împins la `origin`.
 - `T-003` `[găzduit]` — `README.md` recodificat UTF-16LE → UTF-8; `description` din `package.json` reparat. Verificat: 9016 → 4543 octeți cu conținut intact, `package.json` se parsează cu `node`.
 - `T-004` `[găzduit]` — Calea legacy din comentariul de configurare al `src/mcp/doc-server.js` înlocuită cu cea canonică.
 - `T-010` — Clarificarea identității proiectului. Rezolvat 2026-08-12: EIS4P este produsul de producție, nu serviciul de memorie. Contextul AI a fost rescris — `D-008`, `D-009`.
+- `T-015` — Alinierea la structura canonică extinsă. Finalizat 2026-08-12: folderul `ai\` redenumit `01-AI\` cu `git mv`, folderele obligatorii create, 52 de referințe rescrise în 8 fișiere, 6 referințe adânci către `MARCEL` înlocuite cu pointer către `AGENTS.md` al lui — `D-010`, `D-011`. Verificat: cele 27 de referințe de fișier din contextul AI rezolvă pe disc, cele 4 module JS parsează.

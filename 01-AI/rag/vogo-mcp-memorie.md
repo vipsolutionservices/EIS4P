@@ -1,8 +1,8 @@
 # RAG — vogo-mcp, serviciul de memorie externă
 
-Faptele stabile despre codul găzduit în acest repository. Rutat din `ai\RAG.md`.
+Faptele stabile despre codul găzduit în acest repository. Rutat din `01-AI\RAG.md`.
 
-Acest serviciu **nu face parte din produsul EIS4P**. Se află aici din motive istorice — vezi `ai\CONTEXT.md`, secțiunea „Codul găzduit". Se numește `vogo-mcp` în antetul fiecărui fișier sursă.
+Acest serviciu **nu face parte din produsul EIS4P**. Se află aici din motive istorice — vezi `01-AI\CONTEXT.md`, secțiunea „Codul găzduit". Se numește `vogo-mcp` în antetul fiecărui fișier sursă.
 
 ## Scop
 

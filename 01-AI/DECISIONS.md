@@ -64,9 +64,9 @@ Status: ACTIVE
 ```text
 D-006
 Date: 2026-08-12
-Decision: Proiectul adoptă structura canonică AI VOGO — `AGENTS.md`, `CLAUDE.md` și folderul `ai\` — și se înregistrează în `C:\VOGO\PROJECTS.md` cu codul `EIS4P`, aria DEVELOPMENT.
+Decision: Proiectul adoptă structura canonică AI VOGO — `AGENTS.md`, `CLAUDE.md` și folderul `01-AI\` — și se înregistrează în `C:\VOGO\PROJECTS.md` cu codul `EIS4P`, aria DEVELOPMENT.
 Reason: Cerință explicită a utilizatorului: aplicarea promptului canonic din `C:\VOGO\90-AI-SYSTEM` și la acest proiect. Proiectul lipsea din registru.
-Consequences: Contextul AI persistent se ține în `ai\`. La finalul fiecărei etape se actualizează `CONTEXT.md`, `DECISIONS.md`, `TASKS.md` și `HANDOFF.md`.
+Consequences: Contextul AI persistent se ține în `01-AI\`. La finalul fiecărei etape se actualizează `CONTEXT.md`, `DECISIONS.md`, `TASKS.md` și `HANDOFF.md`.
 Status: ACTIVE
 ```
 
@@ -85,7 +85,7 @@ Date: 2026-08-12
 Decision: Codul serviciului de memorie `vogo-mcp` rămâne deocamdată în repository-ul EIS4P. Nu se mută nici într-un repository propriu, nici în vogo.me. În schimb, contextul AI consemnează explicit că repository-ul găzduiește un produs străin, iar identitatea reală a EIS4P este documentată separat.
 Reason: Identificarea inițială a proiectului a fost greșită: contextul AI scris la 2026-08-12 descria EIS4P ca fiind serviciul de memorie. Utilizatorul a clarificat că EIS4P este VOGO eBS Intelligence Suite 4 Production — ETL, BI și agentic AI pe date de producție —, confirmat de materialul de prezentare v.2.0.7 din rădăcină. Dintre variantele propuse, utilizatorul a ales corectarea contextului fără mutare de cod, ca pas minim care oprește propagarea informației false.
 Alternatives: Extragerea serviciului într-un repository propriu `C:\VOGO\50-SOURCE\vogo-mcp`; mutarea lui în repository-ul vogo.me, unde există deja o implementare PHP echivalentă.
-Consequences: Repository-ul rămâne cu două teme fără legătură funcțională. `ai\RAG.md` devine index și rutează către `ai\rag\eis4p-produs.md` și `ai\rag\vogo-mcp-memorie.md`. Orice agent trebuie să verifice despre care temă este vorba înainte de a acționa. Decizia este explicit provizorie — separarea rămâne întrebarea deschisă 1 din `CONTEXT.md`.
+Consequences: Repository-ul rămâne cu două teme fără legătură funcțională. `01-AI\RAG.md` devine index și rutează către `01-AI\rag\eis4p-produs.md` și `01-AI\rag\vogo-mcp-memorie.md`. Orice agent trebuie să verifice despre care temă este vorba înainte de a acționa. Decizia este explicit provizorie — separarea rămâne întrebarea deschisă 1 din `CONTEXT.md`.
 Status: ACTIVE
 ```
 
@@ -95,5 +95,23 @@ Date: 2026-08-12
 Decision: Deciziile `D-001`…`D-005` se păstrează în acest jurnal, marcate ca aparținând codului găzduit, nu produsului.
 Reason: Sunt decizii reale, luate și implementate; ștergerea lor ar pierde trasabilitatea. Fără marcaj însă, un agent le-ar citi drept decizii de arhitectură ale produsului EIS4P.
 Consequences: Dacă serviciul `vogo-mcp` se mută într-un repository propriu, `D-001`…`D-005` și `D-007` îl însoțesc, iar aici rămân numai `D-006`, `D-008` și `D-009`.
+Status: ACTIVE
+```
+
+```text
+D-010
+Date: 2026-08-12
+Decision: Folderul de context a fost redenumit din `ai\` în `01-AI\`, iar proiectul a primit folderele obligatorii `00-INBOX\`, `10-PM\`, `20-DOC\` cu cele șase subfoldere de etapă și `80-ARCHIVE\`.
+Reason: Promptul canonic VOGO a fost extins cu secțiunile „Folderele obligatorii ale unui proiect" și „Redenumirea unui folder `ai` existent". Numele canonic este `01-AI`, numerotat ca să apară primul în orice listare, imediat după `00-INBOX`. Alinierea era întârziată de acest proiect și bloca rescrierea referințelor din proiectul `MARCEL`.
+Consequences: Redenumirea s-a făcut cu `git mv`, deci istoricul fișierelor se păstrează. 52 de referințe de forma cale au fost rescrise în 8 fișiere ale proiectului. Un fals pozitiv a fost prins și reparat: expresia `coderabbit.ai/` dintr-un README din `node_modules`, unde `ai` era parte de domeniu, nu segment de cale. Fișierele goale poartă `dummy.txt`, ca Git să le urmărească.
+Status: ACTIVE
+```
+
+```text
+D-011
+Date: 2026-08-12
+Decision: Din acest proiect se pointează către alt proiect numai prin folderul lui canonic și, la nevoie, prin `AGENTS.md` al lui. Nu se scriu căi către fișiere din interiorul altui proiect.
+Reason: Simetric cu `D-007` din proiectul `MARCEL`, stabilită de utilizator la 2026-08-12. Motivul s-a văzut imediat: referințele adânci scrise de aici către fișiere din `MARCEL` și cele scrise de acolo către fișiere din acest proiect au devenit greșite la prima redenumire de folder, fiindcă structura internă a unui proiect se schimbă fără ca celălalt să afle. `AGENTS.md` este singurul punct de intrare stabil.
+Consequences: Șase referințe adânci către `MARCEL` au fost rescrise în `AGENTS.md`, `01-AI\CONTEXT.md`, `01-AI\RAG.md`, `01-AI\TASKS.md`, `01-AI\HANDOFF.md` și `01-AI\rag\eis4p-produs.md`. Faptele despre PoC rămân descrise aici doar în măsura în care privesc produsul; detaliul aparține proiectului `MARCEL` și se citește de acolo.
 Status: ACTIVE
 ```

@@ -1,6 +1,6 @@
 # RAG — EIS4P, produsul
 
-Faptele stabile despre produsul care dă numele acestui proiect. Rutat din `ai\RAG.md`.
+Faptele stabile despre produsul care dă numele acestui proiect. Rutat din `01-AI\RAG.md`.
 
 ## Identitate
 
@@ -44,7 +44,7 @@ Zero. Niciun element din lista de mai sus nu are implementare în acest reposito
 
 Singura cerere reală pentru acest produs vine din proiectul `MARCEL` — `C:\VOGO\30-PROJECTS\MARCEL SRL`, aria SALES: un PoC pentru Marcel SRL, producător și distribuitor de produse din carne cu rețea de magazine proprii.
 
-Ce înseamnă asta pentru lista de mai sus: **prioritatea nu se citește din materialul de prezentare**, care enumeră toate componentele fără ierarhie, ci din ce cere PoC-ul. Structura de date cerută clientului acoperă nouă seturi — vezi `C:\VOGO\30-PROJECTS\MARCEL SRL\ai\rag\poc-structura-date.md`. Clientul a livrat până acum un singur fișier, o comandă de magazin fără cantități, care acoperă parțial două dintre ele.
+Ce înseamnă asta pentru lista de mai sus: **prioritatea nu se citește din materialul de prezentare**, care enumeră toate componentele fără ierarhie, ci din ce cere PoC-ul. Structura de date cerută clientului acoperă nouă seturi, descrise în proiectul `MARCEL`. Clientul a livrat până acum un singur fișier, o comandă de magazin fără cantități, care acoperă parțial două dintre ele.
 
 Scopul exact al PoC-ului nu este încă stabilit. Până când este, nicio componentă a produsului nu are un criteriu de acceptare.
 

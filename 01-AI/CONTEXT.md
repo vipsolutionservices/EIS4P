@@ -19,7 +19,7 @@ Platformă integrată pentru producție: optimizarea planificării, integrare En
 
 Stratul tehnic anunțat: ETL cu Apache NiFi, depozit de date PostgreSQL, Business Intelligence și dashboarding, WSO2 Integrator pentru API și ESB, agentic AI antrenat pe documentele și datele de producție, RAG pe rețete și istoric, servere MCP pe materii prime, stocuri, vânzări și trading, prognoză cu sezonalitate, planificare optimizată APS, detecție anomalii, predicția rebuturilor, control calitate prin computer vision, analiză OEE și asistent conversațional pe datele din producție.
 
-Detaliile complete: `ai\rag\eis4p-produs.md`.
+Detaliile complete: `01-AI\rag\eis4p-produs.md`.
 
 ## Stare curentă a produsului
 
@@ -44,9 +44,9 @@ d73e326  Add MCP memory server specification       grund.md, 774 linii
 4a39229  Checkpoint - Initial EIS4P AI MCP Platform
 ```
 
-Repository-ul a fost deschis pentru produs și, în aceeași zi, folosit ca gazdă pentru serviciul de memorie. Codul nu se numește nicăieri EIS4P; fiecare fișier își spune `vogo-mcp` în antet. Cauza probabilă a confuziei este acronimul `MCP`, prezent în ambele — vezi `ai\RAG.md`, secțiunea „Capcana terminologică".
+Repository-ul a fost deschis pentru produs și, în aceeași zi, folosit ca gazdă pentru serviciul de memorie. Codul nu se numește nicăieri EIS4P; fiecare fișier își spune `vogo-mcp` în antet. Cauza probabilă a confuziei este acronimul `MCP`, prezent în ambele — vezi `01-AI\RAG.md`, secțiunea „Capcana terminologică".
 
-Codul rămâne aici prin decizie explicită, `DECISIONS.md` → `D-008`. Descrierea lui: `ai\rag\vogo-mcp-memorie.md`.
+Codul rămâne aici prin decizie explicită, `DECISIONS.md` → `D-008`. Descrierea lui: `01-AI\rag\vogo-mcp-memorie.md`.
 
 ## Relația cu proiectul MARCEL
 
@@ -57,8 +57,8 @@ Codul rămâne aici prin decizie explicită, `DECISIONS.md` → `D-008`. Descrie
 | Rol | `MARCEL` cere, `EIS4P` livrează. PoC-ul pentru client se construiește din componentele acestui produs. |
 | Cadru | NDA semnat VOGO ↔ Marcel SRL. Datele clientului nu se publică și nu se folosesc în afara proiectului `MARCEL`. |
 | Material de prezentare | `VOGO eBS Intellingence Suite 4 Production v.2.0.7.docx` / `.pdf` există în ambele proiecte. **Sursa canonică este aici**, urmărită prin Git LFS; copiile din `MARCEL` sunt derivate. |
-| Structura de date a PoC-ului | `MARCEL\Template_PoC_EIS4P_Marcel_Date_Excel.xlsx` — nouă foi cerute clientului. Detalii: `C:\VOGO\30-PROJECTS\MARCEL SRL\ai\rag\poc-structura-date.md`. |
-| Date reale primite | Un singur fișier, `falticeni.csv`, comandă a magazinului Fălticeni, cod `32875`, nomenclator de 190 de articole, fără cantități. Acoperă parțial două din cele nouă foi. Detalii: `C:\VOGO\30-PROJECTS\MARCEL SRL\ai\rag\date-primite-marcel.md`. |
+| Structura de date a PoC-ului | `Template_PoC_EIS4P_Marcel_Date_Excel.xlsx` — nouă foi cerute clientului. Detaliile se citesc din proiectul `MARCEL`. |
+| Date reale primite | Un singur fișier, `falticeni.csv`, comandă a magazinului Fălticeni, cod `32875`, nomenclator de 190 de articole, fără cantități. Acoperă parțial două din cele nouă foi. Detaliile se citesc din proiectul `MARCEL`. |
 
 Consecința pentru acest proiect: **scopul PoC-ului din `MARCEL` este cel care stabilește ce componentă a produsului se construiește prima.** Nu porni implementarea din materialul de prezentare — acela enumeră tot, fără prioritate. Vezi `TASKS.md` → `T-011` și `T-012`.
 
@@ -83,6 +83,6 @@ Pentru repository, indiferent de temă:
 
 1. Când și cum se separă cele două teme: serviciul `vogo-mcp` într-un repository propriu, în repository-ul vogo.me, sau rămâne definitiv aici? Decizia `D-008` este explicit provizorie.
 2. Care implementare a serviciului de memorie răspunde efectiv la `https://vogo.me/ai-mcp/` — cea Node din acest repository sau cea PHP din `vogo.me\ai-mcp\`? Cele două afirmații din surse se contrazic și nu s-a verificat pe server. Utilizatorul a declarat la 2026-08-12 că nu mai folosește `ai-mcp`.
-3. Scopul exact al PoC-ului Marcel: ce se demonstrează, pe ce foi din template și cu ce criteriu de acceptare. Este întrebarea deschisă 3 din `MARCEL\ai\CONTEXT.md` și, până la răspuns, blochează stabilirea primei componente de construit aici.
+3. Scopul exact al PoC-ului Marcel: ce se demonstrează, pe ce foi din template și cu ce criteriu de acceptare. Este întrebarea deschisă 3 din `MARCEL\01-AI\CONTEXT.md` și, până la răspuns, blochează stabilirea primei componente de construit aici.
 4. Copia legacy `C:\sources\EIS4P` se migrează formal după procedura din promptul canonic, sau se consideră deja înlocuită?
 5. De unde pornește implementarea produsului: specificație funcțională, arhitectură, sau o primă componentă verticală extrasă din nevoia PoC-ului Marcel?
