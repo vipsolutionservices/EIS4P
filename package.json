@@ -1,7 +1,7 @@
 {
   "name": "eis4p",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000E\u0000I\u0000S\u00004\u0000P\u0000\r\u0000 \u0000",
+  "description": "vogo-mcp - external AI memory (EIS4P)",
   "main": "index.js",
   "directories": {
     "doc": "docs",
@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/backend/index.js",
-    "dev": "node --watch src/backend/index.js"
+    "dev": "node --watch src/backend/index.js",
+    "mcp": "node src/mcp/server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@modelcontextprotocol/sdk": "^1.30.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "mysql2": "^3.11.5",
     "zod": "^4.4.3"
   },
   "devDependencies": {
