@@ -1,0 +1,1 @@
+Placeholder ca folderul gol sa poata fi urmarit in Git. Se sterge cand folderul primeste continut real.
